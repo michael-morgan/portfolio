@@ -10,14 +10,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var http_1 = require("@angular/http");
+var forms_1 = require("@angular/forms");
+var router_1 = require("@angular/router");
 var app_component_1 = require('./app.component');
+var welcome_component_1 = require('./home/welcome.component');
+var about_component_1 = require('./about/about.component');
+var contact_component_1 = require('./contact/contact.component');
+var page_not_found_component_1 = require("./shared/page-not-found.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                http_1.HttpModule,
+                http_1.JsonpModule,
+                router_1.RouterModule.forRoot([
+                    { path: 'about', component: about_component_1.AboutComponent },
+                    { path: 'contact', component: contact_component_1.ContactComponent },
+                    { path: '', component: welcome_component_1.WelcomeComponent },
+                    { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
+                ])
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                page_not_found_component_1.PageNotFoundComponent,
+                welcome_component_1.WelcomeComponent,
+                about_component_1.AboutComponent,
+                contact_component_1.ContactComponent
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
