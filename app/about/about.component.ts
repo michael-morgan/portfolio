@@ -1,8 +1,9 @@
-import { Component } from "@angular/core";
+import {Component} from "@angular/core";
 
 @Component({
-  templateUrl: 'app/about/about.component.html'
+    moduleId: module.id,
+    templateUrl: 'about.component.html'
 })
 export class AboutComponent {
-  pageTitle: string = "About!";
+    pageTitle: string = "About!";
 }

@@ -15,7 +15,8 @@ var ContactComponent = (function () {
     }
     ContactComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/contact/contact.component.html'
+            moduleId: module.id,
+            templateUrl: 'contact.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], ContactComponent);

@@ -31,7 +31,7 @@ import { PageNotFoundComponent } from "./shared/page-not-found.component";
       AboutComponent,
       ContactComponent
   ],
-    providers: [ PortfolioService ],
+  providers: [ PortfolioService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

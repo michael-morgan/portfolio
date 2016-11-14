@@ -23,7 +23,9 @@ var PortfolioComponent = (function () {
     };
     PortfolioComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/portfolio/portfolio.component.html'
+            moduleId: module.id,
+            templateUrl: 'portfolio.component.html',
+            providers: [portfolio_service_1.PortfolioService]
         }), 
         __metadata('design:paramtypes', [portfolio_service_1.PortfolioService])
     ], PortfolioComponent);

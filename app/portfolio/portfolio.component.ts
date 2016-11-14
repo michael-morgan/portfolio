@@ -3,7 +3,9 @@ import { IPortfolioItem } from "./portfolio-item";
 import { PortfolioService } from "./portfolio.service";
 
 @Component({
-    templateUrl: 'app/portfolio/portfolio.component.html'
+    moduleId: module.id,
+    templateUrl: 'portfolio.component.html',
+    providers: [ PortfolioService ]
 })
 export class PortfolioComponent {
     pageTitle: string = "Portfolio!";

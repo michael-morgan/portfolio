@@ -1,8 +1,9 @@
-import { Component } from "@angular/core";
+import {Component} from "@angular/core";
 
 @Component({
-  templateUrl: 'app/contact/contact.component.html'
+    moduleId: module.id,
+    templateUrl: 'contact.component.html'
 })
 export class ContactComponent {
-  pageTitle: string = "Contact!";
+    pageTitle: string = "Contact!";
 }
