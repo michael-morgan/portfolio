@@ -1,8 +1,21 @@
 import { Component } from "@angular/core";
+import { IPortfolioItem } from "./portfolio-item";
+import { PortfolioService } from "./portfolio.service";
 
 @Component({
-  templateUrl: 'app/portfolio/portfolio.component.html'
+    templateUrl: 'app/portfolio/portfolio.component.html'
 })
 export class PortfolioComponent {
-  pageTitle: string = "Portfolio!";
+    pageTitle: string = "Portfolio!";
+    portfolioItems: IPortfolioItem[];
+    errorMessage: string;
+
+    constructor(private _portfolioService: PortfolioService) { }
+
+    ngOnInit(): void {
+        console.log("In OnInit");
+        this._portfolioService.getPortfolio()
+            .subscribe(portfolio => this.portfolioItems = portfolio,
+                error => this.errorMessage = <any>error);
+    }
 }

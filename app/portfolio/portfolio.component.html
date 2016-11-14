@@ -1,1 +1,14 @@
-<h1>Portfolio!</h1>
+<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" *ngFor="let portfolioItem of portfolioItems">
+    <div class="mdl-card__media">
+        <img class="article-image" [src]="portfolioItem.bannerUrl" border="0" alt="">
+    </div>
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">{{portfolioItem.name}}</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        {{portfolioItem.description}}
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="/portfolio/">Read more</a>
+    </div>
+</div>

@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
-/* GET home page. */
+var data = require('../portfolio-data.json');
+
 router.get('/', function(req, res, next) {
-  res.render('index');
+	res.status(200).json(data);
 });
 
 module.exports = router;

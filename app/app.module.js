@@ -14,7 +14,8 @@ var http_1 = require("@angular/http");
 var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
 var app_component_1 = require('./app.component');
-var welcome_component_1 = require('./home/welcome.component');
+var portfolio_component_1 = require('./portfolio/portfolio.component');
+var portfolio_service_1 = require('./portfolio/portfolio.service');
 var about_component_1 = require('./about/about.component');
 var contact_component_1 = require('./contact/contact.component');
 var page_not_found_component_1 = require("./shared/page-not-found.component");
@@ -31,17 +32,18 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([
                     { path: 'about', component: about_component_1.AboutComponent },
                     { path: 'contact', component: contact_component_1.ContactComponent },
-                    { path: '', component: welcome_component_1.WelcomeComponent },
+                    { path: '', component: portfolio_component_1.PortfolioComponent },
                     { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
                 ])
             ],
             declarations: [
                 app_component_1.AppComponent,
                 page_not_found_component_1.PageNotFoundComponent,
-                welcome_component_1.WelcomeComponent,
+                portfolio_component_1.PortfolioComponent,
                 about_component_1.AboutComponent,
                 contact_component_1.ContactComponent
             ],
+            providers: [portfolio_service_1.PortfolioService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

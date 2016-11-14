@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Portfolio",
+    "description": "Personal portfolio project.",
+    "bannerUrl": "/images/portfolio-example-01.jpg",
+    "sections": [{
+      "title": "Introduction",
+      "text": "Introduction text.",
+      "imageUrls": ["images/example-blog01.jpg"]
+    }, {
+      "title": "Initial Ideas",
+      "text": "Ideas text.",
+      "imageUrls": ["images/example-blog02.jpg"]
+    }, {
+      "title": "Final Concept",
+      "text": "Concept text.",
+      "imageUrls": ["images/example-blog03.jpg"]
+    }]
+  }
+]
